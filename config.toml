@@ -1,0 +1,18 @@
+theme = "m10c"
+baseURL = "https://dereksrose.com/"
+languageCode = "en-us"
+title = "Derek Rose"
+
+[params]
+    author = "Derek Rose"
+    description = "When your hobbies get so complicated that they need documentation."
+
+    [[params.social]]
+        name = "github"
+        url = "https://github.com/Bishma"
+    [[params.social]]
+        name = "twitter"
+        url = "https://twitter.com/Bishma"
+    [[params.social]]
+        name = "linkedin"
+        url = "https://www.linkedin.com/in/dereksrose/"
