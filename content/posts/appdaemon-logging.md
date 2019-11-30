@@ -1,21 +1,23 @@
 ---
 title: "Appdaemon Logging"
 date: 2019-07-22T18:33:18-08:00
-draft: true
+draft: false
 tags: ["home-assistant", "appdaemon"]
 ---
 
 # Combined logging between Home Assistant and AppDaemon
 
-I've begun using [AppDaemon](https://appdaemon.readthedocs.io/en/latest/) apps to extend [Home Assistant](https://www.home-assistant.io/). It's a way to write sandboxed [Python](https://www.python.org/) apps that have access to home-assistant events, devices, services, and presence. It's intended to be replacement for automations that can leverage all the power of python. You can also use it as a way to create sensors in Home Assistant.
+I've begun using [AppDaemon](https://appdaemon.readthedocs.io/en/latest/) apps to extend [Home Assistant](https://www.home-assistant.io/). It's a way to write sandboxed [Python](https://www.python.org/) apps that have access to [home-assistant](https://www.home-assistant.io/) events, devices, services, and presence. It's intended to be replacement for automations that can leverage all the power of python. You can also use it as a way to create sensors in Home Assistant.
 
-My [first foray](https://github.com/Bishma/home-assistant-tng/blob/master/appdaemon/apps/lunch-schedule.py) into AppDaemon (and the Python Language) makes use of an API we have at work to read our next three lunch menus and turns them into a Home Assistant sensor. If lunch is being served the sensor will contain what's for lunch. There is also an attribute on the sensor containing the next three days' menus. I then wrote a [crude custom lovelace card](https://github.com/Bishma/custom-lovelace-cards/tree/master/list-item-card) to display that on my frontend.
+My [first foray](https://github.com/Bishma/home-assistant-tng/blob/master/appdaemon/apps/lunch-schedule.py) into AppDaemon (and the Python Language) makes use of an API we have at work to read our next three lunch menus and turn them into a Home Assistant sensor. If lunch is being served the sensor will contain what's for lunch. There is also an attribute on the sensor containing the next three days' menus. I then wrote a [crude custom lovelace card](https://github.com/Bishma/custom-lovelace-cards/tree/master/list-item-card) to display that on my frontend.
+
+![Custom card displaying attributes from an Appdaemon Sensor](/images/appdaemon-logging_1-custom-card.png)
 
 In working through this I found that needing to keep track of multiple logs was tedious. And since I'm using [Hass.io](https://www.home-assistant.io/hassio/) with the [LogViewer](https://github.com/hassio-addons/addon-log-viewer) addon, I'd like my AppDaemon app logs to be visible there. After a lucky find in the [Home Assistant Forums](https://community.home-assistant.io/t/adding-logs-from-appdaemon-to-the-main-home-assistant-log/105722) I was able to piece together what I wanted.
 
 #### Step 1:
 
-I need to use the home assistant [python script component](https://www.home-assistant.io/integrations/python_script/) to expose a generic logging service. I can use this in AppDaemon to pass logs into Home Assistant for logging.
+I need to use the home assistant [python script component](https://www.home-assistant.io/integrations/python_script/) to expose a generic logging service. I can use the resulting service in AppDaemon to pass logs into Home Assistant for logging.
 
 ```python
 message = data.get('message')
