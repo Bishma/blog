@@ -2,6 +2,8 @@ theme = "m10c"
 baseURL = "https://dereksrose.com/"
 languageCode = "en-us"
 title = "Derek Rose"
+googleAnalytics = "UA-153109937-1"
+enableGitInfo = true
 
 [params]
     author = "Derek Rose"
