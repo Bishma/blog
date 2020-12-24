@@ -1,0 +1,60 @@
+theme: anatole
+baseURL: https://dereksrose.com/
+languageCode: en-us
+DefaultContentLanguage: en
+title: "Derek Rose: A how to guide for overthiking things."
+googleAnalytics: UA-153109937-1
+enableGitInfo: true
+DefaultContentLanguage: en
+summarylength: 10
+enableEmoji: true
+enableRobotsTXT: true
+
+pygmentsUseClasses: true
+pygmentsCodeFences: true
+pygmentsCodefencesGuessSyntax: true
+
+params:
+  author: Derek Rose
+  title: Over-Engineering Is Fun
+  description: My various home automation, electronics, coding, and/or 3D printing projects.
+
+  profilePicture: "profile.png"
+  #keywords: ""
+  favicon: "favicons/"
+  customCss: [] # example ["css/custom.css"]
+  customJs: [] # example ["js/custom.js"]
+  mainSections:
+    - posts
+  #images: ["images/site-feature-image.png"]
+  doNotLoadAnimations: = false
+  # option to specify your linkedin profile in the footer
+  socialIcons:
+    - icon: fab fa-github
+      title: Github
+      url: https://github.com/Bishma/
+    - icon: fab fa-twitter
+      title: Twitter
+      url: https://twitter.com/Bishma
+    - icon: fab fa-twitter-square
+      title: 3D Printing Twitter
+      url: https://twitter.com/derek-prints
+    - icon: fab fa-linkedin
+      title: LinkedIn
+      url: https://www.linkedin.com/in/dereksrose/
+  copyright: Derek Rose - 2020
+
+menu:
+  main:
+    - name: Home
+      identifier: home
+      weight: 100
+      url: "/"
+    - name: Posts
+      weight: 200
+      identifier: posts
+      url: "/posts/"
+    - name: About
+      weight: 300
+      identifier: about
+      url: "/about/"
