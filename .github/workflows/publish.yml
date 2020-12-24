@@ -25,7 +25,7 @@ jobs:
         uses: chabad360/hugo-gh-pages@master
         with:
           githubToken: ${{ secrets.PAT }}
-          repo: Bishma.github.io
+          repo: Bishma/Bishma.github.io
           args: --gc --minify
       - name: Output
         run: echo Site Published
