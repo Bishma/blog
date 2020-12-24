@@ -1,14 +1,15 @@
 ---
 title: "Automated Offsite Snapshots"
 date: 2019-02-09T18:39:04-08:00
-draft: true
+draft: false
+tags: [ "home-assistant", "backups", "automations" ]
 ---
 
 # Adding Home Assistant to My Synology/Dropbox Backup Routine
 
-There was a time when I felt comfortable using GitHub as my main backup solution for [Home Assistant](https://www.home-assistant.io). I would backup my secrets.yaml via my workstation backup routine on the rare times that it changed and I considered the database to be expendable so I was fairly well covered. As Add-Ons have started becoming commonplace and various components have started moving from yaml to integrations I no longer consider this sufficient.
+There was a time when I felt comfortable using GitHub as my main backup solution for [Home Assistant](https://www.home-assistant.io). I would backup my secrets.yaml via my workstation backup routine (on the rare times that it changed) and I considered the database to be expendable. As Add-Ons have started becoming commonplace and various components have started moving from yaml to integrations I no longer consider this sufficient.
 
-This solution utilizes the [thestigh/hassio-addon](https://github.com/carstenschroeder/hassio-addons/tree/master/remote-backup) addon, my home [Synology Diskstation NAS](https://www.synology.com) and [Dropbox](https://www.dropbox.com) via encrypted [Hyper Backup](https://www.synology.com/en-us/dsm/feature/hyper_backup) tasks.
+This solution utilizes the [Remote Backup](https://github.com/carstenschroeder/hassio-addons/tree/master/remote-backup) addon, my home [Synology Diskstation NAS](https://www.synology.com) and [Dropbox](https://www.dropbox.com) via encrypted [Hyper Backup](https://www.synology.com/en-us/dsm/feature/hyper_backup) tasks.
 
 ## Requirements
 
@@ -46,7 +47,6 @@ It's not expendable anymore but also not... mission critical (yet). I am not doi
 + Hypervisor is set up on the Synology Diskstation and configured to use Dropbox.
 + There should be a backup folder in the main volume of the Synology with a home assistant subfolder.
   + `/volume1/Backups/HomeAssistant/`
-+ This was first implemented and tested in Home Assistant version 0.87 and Synology DSM version 6.2.1-23824, later versions may affect these instructions.
 
 ## Set up
 
@@ -135,7 +135,7 @@ This automation is taken directly from the remote backup add-on docs. The time w
   action:
   - service: hassio.addon_start
     data:
-      addon: ce20243c_remote_backup
+      addon: 954f2f4e_remote_backup
 ```
 
 ### Hyper Backup

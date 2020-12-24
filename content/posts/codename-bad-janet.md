@@ -1,21 +1,21 @@
 ---
 title: "Codename: Bad Janet"
 date: 2019-11-03T11:11:53-08:00
-draft: true
+draft: false
 tags: ["home-assistant", "alexa", "appdaemon"]
 ---
 
 # A Better Alexa Skill
 
-In 2016 I was given a 1st gen Echo Dot and I immediately sought to integrate it with [Home Assistant](https://www.home-assistant.io/). The quick way to so at the time was via the Philips Hue Bridge which allowed simple on/off control of devices and that was plenty. Over time more of my home was being controlled by Home Assistant and just turning things on and off wasn't enough.
+In 2016 I was given a 1st gen Echo Dot and I immediately sought to integrate it with [Home Assistant](https://www.home-assistant.io/). The quick way to so at the time was via the Philips Hue Bridge which allowed simple on/off control of devices. Over time more of my home was being controlled by Home Assistant and just turning things on and off wasn't enough.
 
-I could achieve most of what I wanted using custom intent scripts. This allowed me to have nicer grammar when interacting with things like my media center, gave me the ability to pass variables to Home Assistant (like "turn up the volume _two times_"), and allowed me to get [jinja templated](https://www.home-assistant.io/docs/configuration/templating/) responses. At this point I think you can do most, if not all, of this with [Nabu Casa](https://www.nabucasa.com/) + template sensors + Alexa routines but at the time it was the most direct means to get what I wanted.
+I could achieve most of what I wanted using custom intent scripts. This allowed me to have nicer grammar when interacting with things like my media center, gave me the ability to pass variables to Home Assistant (like "turn up the volume _two times_"), and allowed me to get [jinja templated](https://www.home-assistant.io/docs/configuration/templating/) responses. Fast forward to 2019 and I think you can do most, if not all, of this with [Nabu Casa](https://www.nabucasa.com/) + template sensors + Alexa routines. But at the time it was the most direct means to get what I wanted.
 
-Now I want more. I want to be able to do fallbacks, have multi-step intents, do slot confirmations, and just generally have a good VUI. The most personally interesting way to approach this is to learn python and make use of [AppDaemon](https://appdaemon.readthedocs.io/en/latest/) to build a full featured Alexa API. I'll take a stepwise approach to achieving this, starting with trying to feature match (plus a few upgrades) my existing system.
+Now I want more. I want to be able to do fallbacks, have multi-step intents, do slot confirmations, and just generally have a good VUI. The most personally interesting way to approach this is to learn python and make use of [AppDaemon](https://appdaemon.readthedocs.io/en/latest/) to build a full featured Alexa API. I'll take a stepwise approach to achieving this, starting with trying to feature match my existing system with a few needed upgrades.
 
 ## Minimum Viable Product
 
-### On / Off
+### On / Off For All Devices
 
 This was an interesting and entirely unnecessary problem to solve. We can do this outside of my skill because we also use Nabu Casa and the home assistant skill. I choose to duplicate the functionality as a personal challenge and because we get into the habit of invoking the skill and forget that the basics aren't part of it.
 
@@ -63,14 +63,14 @@ Where {device} can be:
 - The Thermostat
   - Synonyms: The Heat, Ecobee
 - The Bedroom AC
-  - This will only work if the AC is already turned on.
+  - This will only work if the AC is already turned on and I don't currently have a state detection for it.
   - Synonyms: The Bedroom Air Conditioner, The Bedroom AC Temperature, The Bedroom Air Conditioned Temperature
 
 Increment can be any integer value (though I will probably add bounds to this)
 
 ### Media control
 
-Control the base functions of the media center. These can all be triggered ne of more time. These won't work for the record player or over the air.
+Control the base functions of the media center. These can all be triggered any number of more time. These won't work for the record player or "over the air."
 
 #### Example phrases:
 
@@ -126,10 +126,14 @@ Where {activity} can be:
 
 ### Command Phrases
 
-There are certain things we want to be able to trigger without a slot. These have analogs that as Alexa Routines.
+There are certain things we want to be able to trigger without a slot. These have analogs that as Alexa Routines but are also avilable in the skill because we often forget.
 
 #### Phrases
 
 - skip back
   - Is also a media command, so "skip back the tv" will also work.
   - Performs a 60 second rewind in all video based Harmony activities.
+
+## The Project
+
+It's not very sophistocated yet, so it's all in [this one appdaemon app](https://github.com/Bishma/home-assistant-tng/blob/master/appdaemon/apps/alexa.py).
