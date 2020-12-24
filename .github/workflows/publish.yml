@@ -27,5 +27,6 @@ jobs:
           githubToken: ${{ secrets.PAT }}
           repo: Bishma/Bishma.github.io
           args: --gc --minify
+          branch: master
       - name: Output
         run: echo Site Published
