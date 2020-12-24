@@ -18,15 +18,15 @@ jobs:
 
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@master
+        uses: actions/checkout@main
         with:
           submodules: true
       - name: Publish Site
-        uses: chabad360/hugo-gh-pages@master
+        uses: chabad360/hugo-gh-pages@main
         with:
           githubToken: ${{ secrets.PAT }}
           repo: Bishma/Bishma.github.io
           args: --gc --minify
-          branch: master
+          branch: main
       - name: Output
         run: echo Site Published
