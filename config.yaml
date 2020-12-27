@@ -10,6 +10,11 @@ summarylength: 10
 enableEmoji: true
 enableRobotsTXT: true
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 pygmentsUseClasses: true
 pygmentsCodeFences: true
 pygmentsCodefencesGuessSyntax: true
@@ -22,7 +27,8 @@ params:
   profilePicture: "profile.png"
   #keywords: ""
   favicon: "favicons/"
-  customCss: [] # example ["css/custom.css"]
+  customCss:
+    - css/flex.css
   customJs: [] # example ["js/custom.js"]
   mainSections:
     - posts
