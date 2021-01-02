@@ -1,7 +1,8 @@
 ---
 title: "NWS Alerts"
 date: 2018-11-18T19:47:48-08:00
-draft: true
+draft: false
+tags: ["home-assistant", "automations"]
 ---
 
 # 3.1 Weather Alerts sent to Telegram via Home Assistant
@@ -10,11 +11,9 @@ draft: true
 
 User _finity_ on the Home Assistant Forums [posted a some REST sensors](https://community.home-assistant.io/t/severe-weather-alerts-from-the-us-national-weather-service/71853/11) for getting National Weather Service alerts from home assistant. I took this idea (and copy and pasted their [REST sensor](https://www.home-assistant.io/components/sensor.rest/)) to use as an automation that will send me alerts via Telegram. As _finity_ points out, this is a nice way to insulate you from the possible shutdown the of the Weather Underground API. It's also a fun use of a valuable public API. **Note:** The National Weather Service APIs are only available for US locations.
 
-_finity's_ implimentation is much more involved than mine and includes their Echos vocalizing the the weather alert. You should [check it out](https://community.home-assistant.io/t/severe-weather-alerts-from-the-us-national-weather-service/71853/11).
+_finity's_ implementation is much more involved than mine and includes their Echos vocalizing the the weather alert. You should [check it out](https://community.home-assistant.io/t/severe-weather-alerts-from-the-us-national-weather-service/71853/11).
 
-![Example of the NWS Alert Text sent through Telegram. Snippet: There has been a change in the weather alert status for our area.
-Beach Hazards Statement issued October 7 at 3:53AM EDT expiring October 7 at 7:00PM EDT by NWS Melbourne FL The National Weather Service...](images/NWS-Alerts_1-
-telegram-example.png)
+![Example of the NWS Alert Text sent through Telegram.](/images/NWS-Alerts_1-telegram-example.png)
 
 ## Prerequisites
 
