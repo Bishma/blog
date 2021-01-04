@@ -1,0 +1,18 @@
+figure {
+    margin-bottom: 12px;
+}
+
+figure img {
+    border-radius: 6px;
+    vertical-align: middle;
+}
+
+figcaption {
+    background-color: #999;
+    color: #272822;
+    padding: 6px 4px;
+    border-style: none;
+    border-radius: 6px;
+    border-color: ##999;
+    box-shadow: 0 0 1px #999 inset;
+}

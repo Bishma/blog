@@ -29,7 +29,9 @@ params:
   favicon: "favicons/"
   customCss:
     - css/flex.css
-  customJs: [] # example ["js/custom.js"]
+    - css/lightbox.css
+    - css/figure.css
+  customJs: []
   mainSections:
     - posts
   #images: ["images/site-feature-image.png"]
