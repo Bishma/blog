@@ -1,0 +1,16 @@
+<!-- only load the CSS once per page-->
+{{ if not ($.Page.Scratch.Get "squashloaded") }}
+    {{ $.Page.Scratch.Set "squashloaded" 1 }}
+    {{ $imagesquash := resources.Get "scss/image-squash.scss" | toCSS | minify | fingerprint }}
+    
+    <link rel="stylesheet"
+    href="{{ $imagesquash.Permalink }}"
+    integrity="{{ $imagesquash.Data.Integrity }}"
+    crossorigin="anonymous"
+    type="text/css" />
+{{ end}}
+
+<ul class="image-squash">
+    {{ .Inner }}
+    <li></li>
+</ul>

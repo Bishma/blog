@@ -1,0 +1,64 @@
+// BASIC
+
+ul.image-squash  {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-squash li {
+    height: 20vh;
+    flex-grow: 0;
+    align-items: flex-start;
+}
+
+.image-squash li:last-child {
+    // There's no science in using "10" here. In all my testing, this delivered the best results.
+    flex-grow: 10;
+}
+
+.image-squash img {
+    border-radius: 1vh;
+    border-width: 1px;
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+    height: auto;
+}
+
+// ADVANCED
+
+// Portrait
+
+@media (max-aspect-ratio: 1/1) {
+    .image-squash li {
+        height: 18vh;
+    }
+}
+
+// Short screens
+
+@media (max-height: 480px) {
+    .image-squash li {
+        height: 80vh;
+    }
+}
+
+// Smaller screens in portrait
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+    .image-squash ul {
+        flex-direction: row;
+    }
+
+    .image-squash li {
+        height: auto;
+        width: 100%;
+    }
+    .image-squash img {
+        width: 100%;
+        max-height: 75vh;
+        min-width: 0;
+    }
+}

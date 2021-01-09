@@ -1,0 +1,21 @@
+{{ $image := .Get "image" }}
+{{ $caption := .Get "caption" | markdownify | plainify }}
+<li>
+    <a 
+        {{ if .Get "gallery" }}
+            data-lightbox="{{ .Get "gallery" | markdownify | plainify }}"
+        {{ else }}
+            data-lightbox="{{ $image | base64Encode }}"
+        {{ end }}
+        {{ if $image }}
+            href="{{ $image }}"
+        {{ else }}
+            href="#"
+        {{ end }}
+        {{ with $caption }} title="{{ . }}"{{ end }}>
+    <img
+        src="{{ .Get "image" | plainify }}"
+        {{ with $caption }} title="{{ . }}"{{ end }}
+        loading="lazy">
+    </a>
+</li>
