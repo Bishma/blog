@@ -1,0 +1,19 @@
+{{ $image := .Get "image" }}
+{{ $caption := .Get "caption" | markdownify | plainify }}
+{{ $gallery := .Get "gallery" | plainify}}
+<a
+    {{ if $gallery }}
+        data-lightbox="{{ $gallery }}"
+    {{ else }}
+        data-lightbox="{{ $image | base64Encode }}"
+    {{ end }}
+    {{ if $image }}
+        href="{{ $image }}"
+    {{ else }}
+        href="#"
+    {{ end }}
+    {{ with $caption }} title="{{ . }}"{{ end }}>
+
+    {{ .Inner | markdownify | plainify }}
+
+</a>

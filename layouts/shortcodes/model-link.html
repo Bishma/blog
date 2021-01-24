@@ -1,0 +1,26 @@
+{{ $thingiverse_base := "https://www.thingiverse.com/thing:" }}
+{{ $prusa_base := "https://www.prusaprinters.org/prints/" }}
+
+{{ $thingiverse_id := .Get "thingiverse" | int }}
+
+{{ if $thingiverse_id }}
+    {{ $href := print $thingiverse_base $thingiverse_id }}
+    {{ .Scratch.Set "href" $href }}
+    {{ .Scratch.Set "link_text" "Thingiverse" }}
+{{ else }}
+    {{ if .Get 0 }}
+        {{ $id := .Get 0 }}
+        {{ .Scratch.Set "prusa_id" $id }}
+    {{ else }}
+        {{ $id := .Get "prusa" }}
+        {{ .Scratch.Set "prusa_id" $id }}
+    {{ end }}
+    
+    {{ $prusa_id := .Scratch.Get "prusa_id" }}
+    {{ $href := print $prusa_base $prusa_id }}
+    {{ .Scratch.Set "href" $href }}
+    {{ .Scratch.Set "link_text" "Prusaprinters" }}
+{{ end }}
+<a
+    href="{{ .Scratch.Get "href" }}"
+    target="_blank">{{ .Scratch.Get "link_text" }}</a>
