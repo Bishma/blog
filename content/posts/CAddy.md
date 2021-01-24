@@ -1,6 +1,6 @@
 ---
 title: "Just A Super [glue] Organizer"
-date: 2021-01-18T18:36:03-08:00
+date: 2021-01-23T18:36:03-08:00
 description: A super glue organizer designed for a prusaprinters.org contest.
 images:
 - /images/CAddy/tray front - full.jpg
