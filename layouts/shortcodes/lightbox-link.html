@@ -12,8 +12,5 @@
     {{ else }}
         href="#"
     {{ end }}
-    {{ with $caption }} title="{{ . }}"{{ end }}>
-
-    {{ .Inner | markdownify | plainify }}
-
-</a>
+    {{ with .Get "caption" }} title="{{ . }}"{{ end }}
+>{{ .Inner | markdownify | plainify }}</a>
