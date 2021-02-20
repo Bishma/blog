@@ -2,7 +2,7 @@
 title: Patio Umbrella Stand Cap
 date: 2021-01-10T14:09:58-08:00
 description: Our Winter Umbrella
-summary: A way to keep detritus out of our outdoor umbrella stand over the weekend.
+summary: A way to keep detritus out of our outdoor umbrella stand over the winter.
 images:
     - /images/umbrella-stand-cap/hero%20image.jpg
     - /images/umbrella-stand-cap/on%20build%20plate.jpg
