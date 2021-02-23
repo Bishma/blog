@@ -13,9 +13,9 @@ draft: false
 
 **Compatible with the [Skadis Universal Hook Set](https://www.thingiverse.com/thing:2853257)**
 
-We have several [Ikea Raskog carts](https://www.ikea.com/us/en/p/raskog-utility-cart-white-20382932/) at our house including one I use as an end table. This project has been on my todo list longer than I've had a 3D printer. It was the second thing I tried to design (the first was a [door knob]({{< ref "posts/garage-lock-handle.md" >}})) and so my [initial attempts](https://twitter.com/Derek_Prints/status/1271936399005020160) weren't great.
+We have several [Ikea Raskog carts](https://www.ikea.com/us/en/p/raskog-utility-cart-white-20382932/) at our house including one I use as an end table. They're very versatile but also not easy to keep organized. So this project has been on my todo list longer than I've had a 3D printer. In fact it was one of the ideas that convinced me to buy a printer in the first place. It was also the second thing I tried to design (the first was a [door knob]({{< ref "posts/garage-lock-handle.md" >}})) and so my [initial attempts](https://twitter.com/Derek_Prints/status/1271936399005020160) weren't great.
 
-Once I figured out how to make an easy to print hook that would hold firmly onto the cart's trays, it was obvious that I could make a hook that would the same way as the [Skadis Universal Hook Set](https://www.thingiverse.com/thing:2853257). Like that collection this is easy to print (no supports), easy to assemble with no glue, strong, and stable. By spacing my hook posts at intervals of 44.5mm I was also able to make the Switch Holder, USB Cable Holder, Pen Holders, and Hook Row compatible with the Skadis pegboard by using the Universal Hook from that set.
+Once I figured out how to make an easily printable hook that would hold firmly onto the cart's trays it was obvious that I could make work the same way that the [Skadis Universal Hook Set](https://www.thingiverse.com/thing:2853257) works. Like that collection this is easy to print (no supports), easy to assemble with no glue, strong, and stable. By spacing my hook posts at intervals of 44.5mm I was also able to make the Switch Holder, USB Cable Holder, Pen Holders, and Hook Row compatible with the [Ikea Skadis pegboard](https://www.ikea.com/us/en/cat/skadis-series-37813/) by swapping the Universal Hook from that set.
 
 {{< layout/image-squash >}}
 
@@ -29,7 +29,9 @@ Once I figured out how to make an easy to print hook that would hold firmly onto
 
 {{< /layout/image-squash >}}
 
-I got as far as functional prototypes before I got distracted by other projects. Being one of my first designs in Fusion 360 what I had created was not easy to modify. Then in the winter of '21 PrusaPrinters ran a [contest](https://blog.prusaprinters.org/organization-contest-announcement_42886/) for organizer designs which spurred me to finish things up. I recreated my designs in a more maintainable way and got them to a releasable state before the contest ended.
+I got as far as functional prototypes before I got distracted by other projects. Being one of my first designs in Fusion 360 what I had created was not easy to modify. Then, in the winter of '21, PrusaPrinters ran a [contest](https://blog.prusaprinters.org/organization-contest-announcement_42886/) for organizer designs which spurred me to finish things up. I recreated my designs in a more maintainable way and got them to a releasable state before the contest ended.
+
+Here's what's included.
 
 ## One Piece Hooks
 
