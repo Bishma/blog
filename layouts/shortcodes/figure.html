@@ -34,8 +34,10 @@
          />
     </a>
   <!-- caption and attr-->
+{{ if .Inner }}
   <figcaption>
       {{ .Inner | markdownify }}
   </figcaption>
+{{ end }}
 </figure>
 {{ .Page.Scratch.Add "fig" 1 }}
