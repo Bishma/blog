@@ -40,7 +40,7 @@ I've gone with [MariaDB](https://mariadb.org/) for now. Home Assistant makes use
 
 ### nginx
 
-Initially, at least, I'm going to need a public API to support my Alexa skill. [Nginx](https://www.nginx.com/) is how I'll handing internal and external routing within my stack.
+Initially, at least, I'm going to need a public API to support my Alexa skill. [Nginx](https://www.nginx.com/) is how I'll be handling internal and external routing within my stack.
 
 ## Near Future Goals
 
