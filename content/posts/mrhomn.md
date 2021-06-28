@@ -14,7 +14,7 @@ draft: false
 
 When I decided to leave my job of over 15 years I knew that I wanted a bit of a career rewind. The last several years have seen me in full-time management positions and my programming, sysadmin, and SRE skills have gotten rusty. Since I learn by doing I wanted a project that would get me up-to-date and which I'd have fun implementing.
 
-[MrHomn](https://github.com/Bishma/MrHomn) is the 3rd generation of my home automation setup[^explain]. Which I plan to expand out to utilize common open source tools
+[MrHomn](https://github.com/Bishma/MrHomn) is the 3rd generation of my home automation setup[^explain]. Which I plan to expand out to utilize common open source tools all operating in a docker-compose stack.
 
 ## Stack Elements
 
@@ -62,7 +62,7 @@ This is running on my local network. I'm not going to have enough traffic for th
 
 SQL is well and good, but if you want to evaluate trends you want to be able to query for timeseries data. I am planning to use [InfluxDB](https://www.influxdata.com/).
 
-I will also make use of InfluxDB as the storage backend for Prometheus.
+I'd' likely make use of InfluxDB as the storage backend for Prometheus.
 
 #### Grafana
 
@@ -88,7 +88,7 @@ My goal is to be able to duplicate a natural language interface for both voice a
 
 ### No hardware requiring the cloud
 
-I've got a number of devices in my current home automation that require a cloud provider. I want to limit, if not eliminate this weakness. First it means that if the internet is out my house is degraded. It also means that I'm reliant on these companies keeping their services online and open enough for home assistant integrations to work. Also, I want my data and I want to stop giving so much of it away. Frankly I don't think any of these companies properly compensate us for the wealth of data we expose.
+I've got a number of devices in my current home automation that require a cloud provider. I want to limit, if not eliminate this weakness. First it means that if the internet is out then my house is degraded. It means that I'm reliant on these companies to keep their services online and open enough for home assistant integrations to work with them. Also, I want my data and I want to stop giving so much of it away. Frankly I don't think any of these companies properly compensate us for the wealth of data we expose.
 
 #### Voice Assistant
 
@@ -98,7 +98,7 @@ All of that is to say that I want to replace Alexa. I'll be doing various experi
 
 #### Doorbell
 
-I'm hearing that the [Amcrest wifi doorbell](https://amcrest.com/smarthome-2-megapixel-wireless-doorbell-security-camera-1920-x-1080p-wifi-doorbell-camera-ip55-weatherproof-two-way-audio-ad110.html) is decent hardware with a terrible app to back it up. But it has the but plus of not being cloud based. I can mimic alerting with Home Assistant + Telegram Bot but I don't want to loose the intercom functionality. There's enough chance that we won't be happy with the end result that I'm not willing to spend the money on one yet.
+I'm hearing that the [Amcrest wifi doorbell](https://amcrest.com/smarthome-2-megapixel-wireless-doorbell-security-camera-1920-x-1080p-wifi-doorbell-camera-ip55-weatherproof-two-way-audio-ad110.html) is decent hardware with a terrible app to back it up. But it has the big plus of not being cloud based. I can mimic alerting with Home Assistant + Telegram Bot, unfortunately that won't replicate intercom functionality. There's enough chance that we won't be happy with the end result that I'm not willing to spend the money on one yet.
 
 We have a couple Amcrest PTZ cameras connected to home assistant via [Synology Surveillance Station](https://www.synology.com/en-us/surveillance).
 
@@ -110,11 +110,11 @@ This is a very affordable device that should be capable of keeping up with the t
 
 #### Face detection
 
-Nothing creepy, but if we have non-cloud door cams I can have MrHome only send notifications if it identifies a human in the camera's view when a motion detection triggers. And if I can get it to recognize ~~my many enemies~~ friends then I can ~~launch countermeasures~~ play harp music... or something.
+If we have non-cloud door cams I can have MrHome only send notifications if it identifies a human in the camera's view when a motion detection triggers, avoiding some false positives. And if I can get it to recognize ~~my many enemies~~ friends then I can ~~launch countermeasures~~ play harp music... or something.
 
 #### Routine Detection
 
-This is a half-baked idea at this point, but I'd like to have MrHomn be able to do something like:
+This is a half-baked idea at this point; I'd like to have MrHomn be able to do something like:
 
 * Detect a recurring change to my day-to-day routine
 * Generate an automation change proposal based on the new behavior
