@@ -1,7 +1,7 @@
 ---
 title: "Drybox"
 date: 2021-06-27T18:05:02-07:00
-description: Why do something simple when you can 18 bearings instead?
+description: Why do something simple when you can use 18 bearings instead?
 images:
     - /images/drybox/in_use.jpg
 draft: false
