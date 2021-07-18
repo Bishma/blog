@@ -9,7 +9,7 @@ draft: false
 
 # {{< param description >}}
 
-[Last time]({{< ref "/posts/mrhomn" >}} "MrHomn") on the MrHome project I talked about wanting to expand my home automation system and deciding to do it via docker-compose. This is mainly because I wanted to learn more about deploying containerized apps using naked docker-compose. The other reason is that I have a lot of spare compute and IO resources on my NAS and docker was the most direct approach to running [home assistant](https://www.home-assistant.io/) there.
+[Last time]({{< ref "/posts/mrhomn" >}} "MrHomn") on the MrHomn project I talked about wanting to expand my home automation system and deciding to do it via docker-compose. This is mainly because I wanted to learn more about deploying containerized apps using naked docker-compose. The other reason is that I have a lot of spare compute and IO resources on my NAS and docker was the most direct approach to running [home assistant](https://www.home-assistant.io/) there.
 
 {{< figure src="/images/mrhomn-migration-to-docker/mrhomn1.png" width="70%" >}}{{< /figure >}}
 
@@ -229,7 +229,7 @@ The fix that finally worked was altering my synology's iptables settings. I don'
 
 ## The port dance
 
-For the sake of compatibility I need Traefik to listen for traffic on public  ports 80 and 443 but I'm already using these ports (privately) on my Synology Diskstation for internal traffic routing through nginx. So traffic will hit my my WAF on those ports and then forwards to ports 8321 and 8322 on my Synology.
+For the sake of compatibility I need ingressing traffic to come in via public ports 80 and 443 but I'm already using these ports (privately) on my host device for unrelated internal traffic routing through nginx. So home automation requests will hit my my WAF on 80/443 and then forward to ports 8321/8322 respectively on my Synology. But then docker is going map those host ports back to 80/443 😕
 
 To keep it all straight I made a flow chart.
 
@@ -237,7 +237,7 @@ To keep it all straight I made a flow chart.
 A diagram of the port flow of incoming web requests.
 {{< /figure >}}
 
-BTW, {{< lightbox-link image="/images/mrhomn-migration-to-docker/nginx_port_dance.png" caption="All the routing that nginx needed to also handle certbot." >}}this is what it looked like{{< /lightbox-link >}} when I first set it up with Nginx. I don't know why, but having to maintain that extra route for certbot was a, if you'll forgive the idiom, a bridge too far.
+BTW, {{< lightbox-link image="/images/mrhomn-migration-to-docker/nginx_port_dance.png" caption="All the routing that nginx needed to also handle certbot." >}}this is what it looked like{{< /lightbox-link >}} when I first set it up with Nginx. I don't know why, but having to maintain that extra route for certbot was, if you'll forgive the idiom, a bridge too far.
 
 # The migration process
 
