@@ -127,7 +127,7 @@ First we need to tell Traefik to enable routing to this container, since we turn
 ```yaml {linenos=table,linenostart=50}
     labels:
       - traefik.enable=true
-      - traefik.http.routers.homeassistant.rule=Host(`yggdrasil.amalgamatedwidget.com`)
+      - traefik.http.routers.homeassistant.rule=Host(`my.site.com`)
       - traefik.http.routers.homeassistant.entrypoints=websecure
       - traefik.http.routers.homeassistant.tls.certresolver=myresolver
       - traefik.http.services.homeassistant.loadbalancer.server.port=8123
@@ -161,7 +161,7 @@ The only difference there, compared to home assistant, is that our routing rule 
 ```yaml {linenos=table,linenostart=72}
     labels:
       - traefik.enable=true
-      - traefik.http.routers.appdaemon.rule=(Host(`yggdrasil.amalgamatedwidget.com`) && PathPrefix(`/api/appdaemon/`))
+      - traefik.http.routers.appdaemon.rule=(Host(`my.site.com`) && PathPrefix(`/api/appdaemon/`))
       - traefik.http.routers.appdaemon.entrypoints=websecure
       - traefik.http.routers.appdaemon.tls.certresolver=myresolver
       - traefik.http.services.appdaemon.loadbalancer.server.port=5050
