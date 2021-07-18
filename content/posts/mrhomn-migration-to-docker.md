@@ -72,7 +72,7 @@ Now we get to the entry point that matters. This "websecure" endpoint will handl
       - "--entrypoints.websecure.address=:443"
       - "--entrypoints.websecure.forwardedHeaders.insecure"
       - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
-      - "--certificatesresolvers.myresolver.acme.email=developer@dereksrose.com"
+      - "--certificatesresolvers.myresolver.acme.email=me@my.site.com"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
 ```
 
