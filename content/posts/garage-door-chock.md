@@ -10,11 +10,11 @@ draft: false
 
 # {{< param description >}}
 
-Our 1950's home has its original garage door track and spring. The whole thing has help up remarkably well but it still is aging as resistant to any repair less than a full restoration. Over almost 70 years the spring that assists door opening and also helps hold the door up has weakened. Since we have plans to rework the garage I'm not taking on that project (now) and have been making do with the fact the garage door doesn't always hold itself up anymore.
+Our 1950's home has its original garage door, track, and spring. The whole thing has help with age, but it can't fully resist gravity any longer. It also has been painted several times over the years and needs a full restoration. Since we have plans to rework the garage I'm not taking on that project (now) and have been making do with the fact the garage door doesn't always hold itself up anymore.
 
-For the last 18 months the fix has been a screwdriver tied near the door with string, that we can insert through a hold an prevent the door from falling. In terms of quick fixes for common life problems, this one isn't bad but it's not without some annoyances. There are only a couple holes in the track and they're relatively convenient for holding the door all the way up. Also the string sometimes gets caught up in the door and fling around the screw driver.
+For the last 18 months the fix has been a screwdriver tied near the door with string, which we can insert through a hole in the track to act as a pin to prevent the door from falling. In terms of quick fixes for common life problems, this one isn't bad but it's not without some annoyances. There are only a couple holes in the track and they're relatively convenient for holding the door all the way up. Also the string sometimes gets caught up in the door and fling around the screwdriver.
 
-So I made a simple chock out of TPU with a small handle.
+So I made a threw together this chock out of TPU with a small PETG handle.
 
 {{< layout/image-squash >}}
 
@@ -52,6 +52,10 @@ I made mine with a debossed monogram on the handle. I have also included an STL 
 Parts and tools
 {{< /figure >}}
 
+I made this using 10mmx2mm magnets because it's what I had on hand. Since I needed a bit more _uumph_ I stacked two magnets into each of the four holes (8 total magnets). With rare earth magnets I always like to use a file to scuff the surfaces of the magnets before I glue them in. I also used thin CA so it's really get into the nooks and crannies.
+
+I also glued the handle to the ramp. I use rubberized superglue here, but I don't really think it was needed. I put the glue on the ramp: some on the bottom of the dovetail and some on the backstop that keeps the handle from sliding out the front side of the ramp. A little glue goes a long way.
+
 ### Parts
 
 * (8) 10mmx2mm neodymium magnets
@@ -62,10 +66,6 @@ Parts and tools
 ### Tools
 
 * A file or course sandpaper for distressing magnet surfaces (optional)
-
-I made this using 10mmx2mm magnets because it's what I had on hand. Since I needed a bit more _uumph_ I stacked two magnets into each of the four holes (8 total magnets). With rare earth magnets I always like to use a file to scuff the surfaces of the magnets before I glue them in. I also used thin CA so it's really get into the nooks and crannies.
-
-I also glued the handle to the ramp. I use rubberized superglue here, but I don't really think it was needed. I put the glue on the ramp: some on the bottom of the dovetail and some on the backstop that keeps the handle from sliding out the front side of the ramp. A little glue goes a long way.
 
 ## Availability
 
