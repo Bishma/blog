@@ -10,9 +10,9 @@ draft: false
 
 # {{< param description >}}
 
-Our 1950's home has its original garage door, track, and spring. The whole thing has help with age, but it can't fully resist gravity any longer. It also has been painted several times over the years and needs a full restoration. Since we have plans to rework the garage I'm not taking on that project (now) and have been making do with the fact the garage door doesn't always hold itself up anymore.
+Our 1950's home has its original garage door, track, and spring. The whole thing has aged well despite neglect, but it can't fully resist gravity any longer. It also has been painted several times over the years and is really in need of a full restoration. Since we have plans to rework the garage in the not too distant future I'm not taking on that project (now) and have been just making do with the fact the garage door doesn't always hold itself up anymore.
 
-For the last 18 months the fix has been a screwdriver tied near the door with string, which we can insert through a hole in the track to act as a pin to prevent the door from falling. In terms of quick fixes for common life problems, this one isn't bad but it's not without some annoyances. There are only a couple holes in the track and they're relatively convenient for holding the door all the way up. Also the string sometimes gets caught up in the door and fling around the screwdriver.
+For the last 18 months the fix has been a screwdriver tied near the door with string, which we can insert through a hole in the track to act as a pin to prevent the door from falling. In terms of quick fixes for common life problems, this one isn't bad but it's not without some annoyances. The biggest is that the string sometimes gets caught up in the door mechanism and the screwdriver gets flung around and could take out an eye.
 
 So I made a threw together this chock out of TPU with a small PETG handle.
 
@@ -28,13 +28,14 @@ So I made a threw together this chock out of TPU with a small PETG handle.
 
 ## Description
 
-I put magnets in the base for two purposes. First, when the door is closed its handy to be able to attach the chock the the door lock assembly. Second, it hold the chock in place against gravity until the force of the wheel pushing the chock against the track lets friction do most of the work.
+I put magnets in the base for two purposes. First, when the door is closed its convenient to be able to attach the chock to the door lock assembly as storage. Second, it hold the chock in place against gravity until the force of the wheel pushing the chock against the track lets friction do most of the work.
 
 * Wedge is deep enough to more than accommodate all the horizontal wheel movement that the door track allows.
 * Eight 10mm x 2mm rare earth magnets (4 stacks of 2 magnets) for holding strength.
 * Easy printing.
   * Handle prints separately attaches with a dovetail
-* Assembles with super glue.
+  * No supports or tricky overhangs
+* Assembles with superglue.
 
 ## Print Settings
 
