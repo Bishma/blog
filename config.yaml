@@ -59,6 +59,10 @@ menu:
       weight: 200
       identifier: posts
       url: "/posts/"
+    - name: Tags
+      weight: 200
+      identifier: tags
+      url: "/tags/"
     - name: About
       weight: 300
       identifier: about
