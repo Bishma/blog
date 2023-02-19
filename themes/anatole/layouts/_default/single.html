@@ -20,11 +20,30 @@
             {{- end -}}
 
         </div>
+        <br />
         <div class="post-footer">
+            <div class="more-title">
+                Find More:
+            </div>
             <div class="info">
                 {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
                 {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
             </div>
+
+            <span class="separator"> &nbsp; &nbsp;</span>
+            <span class="separator">
+                {{ if .NextPage }}
+                <a class="link-reverse" href="{{ .NextPage.Permalink }}?ref=footer">« {{ .NextPage.Title | truncate 50 "..." }}</a>
+                {{ end }}
+            </span>
+            {{ if and .NextPage .PrevPage }}
+                <span class="separator"> &nbsp; | &nbsp; </span>
+            {{ end }}
+            <span class="separator">
+                {{ if .PrevPage }}
+                <a class="link-reverse" href="{{ .PrevPage.Permalink }}?ref=footer">{{ .PrevPage.Title | truncate 50 "..."}} »</a>
+                {{ end }}
+            </span>
         </div>
     </div>
 

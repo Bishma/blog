@@ -406,8 +406,17 @@ a:active {
 }
 
 .post .post-footer {
-    padding: 0 0 10px 0;
-    border-bottom: 1px solid var(--border-color);
+    padding: 18px 0 10px 0;
+    border-top: 1px solid var(--heading-color);
+}
+
+.post .post-footer .separator {
+    font-size: 90%;
+}
+
+.post .post-footer .more-title {
+    font-size: 108%;
+    font-weight: bold;
 }
 
 .post .post-footer .meta {
@@ -418,7 +427,6 @@ a:active {
 
 .post .post-footer .meta .info {
     float: left;
-    font-size: 12px;
     margin-bottom: 1em;
     color: var(--body-color);
 }
