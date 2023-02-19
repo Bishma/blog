@@ -19,6 +19,9 @@
               {{- partial "contact.html" . -}}
             {{- end -}}
 
+            {{ if eq .Type "posts"}}
+                {{ partial "comments.html" . }}
+            {{ end }}
         </div>
         <br />
         <div class="post-footer">
