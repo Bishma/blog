@@ -23,6 +23,12 @@
         integrity="{{ $markupHighlightStyle.Data.Integrity }}"
         crossorigin="anonymous"
         type="text/css">
+    {{ $mastodonCommentStyle := resources.Get "css/mastodonComments.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet"
+        href="{{ $mastodonCommentStyle.Permalink }}"
+        integrity="{{ $mastodonCommentStyle.Data.Integrity }}"
+        crossorigin="anonymous"
+        type="text/css">
     {{- $css := "" -}}
     {{- range .Site.Params.customCss -}}
     {{ $css := resources.Get . | fingerprint }}
