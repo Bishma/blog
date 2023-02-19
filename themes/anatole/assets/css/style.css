@@ -337,6 +337,10 @@ a:active {
     max-width: 840px;
 }
 
+.post code {
+    font-family: monospace;
+}
+
 .post .post-title h1 {
     text-transform: uppercase;
     font-size: 28px;
@@ -407,6 +411,9 @@ a:active {
 
 .post .post-footer {
     padding: 18px 0 10px 0;
+}
+
+.post .post-footer .more-title {
     border-top: 1px solid var(--heading-color);
 }
 
