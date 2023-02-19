@@ -3,7 +3,7 @@
         <div class="post-content">
             <div class="post-title">
                 <h1>{{ .Title }}</h1>
-                {{ if eq .Type "post"}}
+                {{ if eq .Type "posts"}}
                     <div class="info">
                         <em class="fas fa-calendar-day"></em>
                         <span class="date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
