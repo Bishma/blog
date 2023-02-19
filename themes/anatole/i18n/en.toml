@@ -17,8 +17,17 @@ other = "Sorry, this page does not exist."
 [head_back]
 other = "You can head back to <a href=\"{{ . }}\">homepage</a>."
 
-[comments]
-other = "comments"
+[Comments]
+  other = "Comments"
+
+[Use_fediverse_account]
+  other = 'You can use your Mastodon or Fediverse account to <strong><a class="button" href="https://{{ .host }}/interact/{{ .id }}?type=reply">reply</a></strong> to this <strong><a class="link" href="https://{{ .host }}/@{{ .username }}/{{ .id }}">toot!</a></strong>'
+
+[Load_comments]
+  other = "Load comments"
+
+[No_comment]
+  other = "No comment, yet, be the first to react!"
 
 [send]
 other = "Send"
