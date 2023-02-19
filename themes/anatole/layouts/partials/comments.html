@@ -1,0 +1,106 @@
+{{ with .Params.comments }}
+<div class="article-content">
+  <h2>Comments</h2>
+  {{ if not .id  }}
+    <p style="display: hidden;">
+  {{ else }}
+    <p>
+  {{ end }}
+      You can use your Mastodon account to reply to this <a class="link" href="https://{{ .host }}/@{{ .username }}/{{ .id }}" target="_blank">post</a>. <br />
+      Or <a href="" id="copyButton">copy</a> and paste the post URL into the search field of the Mastodon client of your choice.
+    </p>
+  <p id="mastodon-comments-list"></p>
+  <noscript><p>You need JavaScript to view the comments.</p></noscript>
+  {{ $purify := resources.Get "js/purify.min.js" }}
+  <script
+    type="text/javascript"
+    src="{{ $purify.Permalink }}"
+    type="module"></script>
+  <script type="text/javascript">
+
+    // If comments havent been loaded yet, load them when the user scrolls to within 100px of the bottom of the page
+    let limitBottom = document.documentElement.offsetHeight - window.innerHeight - 100;
+    let commentsLoaded = false;
+    window.addEventListener("scroll",function(){
+      // 3 conditions
+      // 1. The user has scrolled to within 100px of the bottom of the page
+      // 2. Comments have not been loaded yet
+      // 3. The post has a Mastodon ID (from Params.comments)
+      if(document.documentElement.scrollTop >= limitBottom && !commentsLoaded && '{{ .id  }}' != ''){
+        loadComments();
+        commentsLoaded = true;
+      } else if ('{{ .id  }}' == '') {
+        document.getElementById('mastodon-comments-list').innerHTML = "<em>Comments are disabled for this post.</em>";
+      }
+    })
+ 
+    document.getElementById('copyButton').addEventListener('click', (e) => {
+      navigator.clipboard.writeText('https://{{ .host }}/@{{ .username }}/{{ .id }}');
+      e.preventDefault();
+
+      // Save the original
+      const $cpLk = $("#copyButton");      
+      const originalText = $cpLk.text();
+      console.log(originalText)
+
+      // Change the text for 2 seconds
+      $cpLk.text("👍");
+      
+      setTimeout(function() {
+        $cpLk.text(originalText);
+      }, 2000);
+    });
+
+    function escapeHtml(unsafe) {
+      return unsafe
+           .replace(/&/g, "&amp;")
+           .replace(/</g, "&lt;")
+           .replace(/>/g, "&gt;")
+           .replace(/"/g, "&quot;")
+           .replace(/'/g, "&#039;");
+   }
+
+    function loadComments() {
+      fetch('https://{{ .host }}/api/v1/statuses/{{ .id }}/context')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          if(data['descendants'] &&
+             Array.isArray(data['descendants']) && 
+            data['descendants'].length > 0) {
+              document.getElementById('mastodon-comments-list').innerHTML = "";
+              data['descendants'].forEach(function(reply) {
+                reply.account.display_name = escapeHtml(reply.account.display_name);
+                reply.account.emojis.forEach(emoji => {
+                  reply.account.display_name = reply.account.display_name.replace(`:${emoji.shortcode}:`,
+                    `<img src="${escapeHtml(emoji.static_url)}" alt="Emoji ${emoji.shortcode}" height="20" width="20" />`);
+                });
+                mastodonComment =
+                  `<div class="mastodon-comment">
+                     <div class="avatar">
+                       <img src="${escapeHtml(reply.account.avatar_static)}" height=60 width=60 alt="">
+                     </div>
+                     <div class="content">
+                       <div class="author">
+                         <a href="${reply.account.url}" rel="nofollow">
+                           <span class="displayName">${reply.account.display_name}</span>
+                           <span class="accountName">${escapeHtml(reply.account.acct)}</span>
+                         </a>
+                         <a class="date" href="${reply.uri}" rel="nofollow">
+                           ${reply.created_at.substr(0, 10)}
+                         </a>
+                       </div>
+                       <div class="mastodon-comment-content">${reply.content}</div> 
+                     </div>
+                   </div>`;
+                document.getElementById('mastodon-comments-list').appendChild(DOMPurify.sanitize(mastodonComment, {'RETURN_DOM_FRAGMENT': true}));
+              });
+          } else {
+            document.getElementById('mastodon-comments-list').innerHTML = "<p>Not comments found</p>";
+          }
+        });
+      };
+  </script>
+</div>
+{{ end }}
