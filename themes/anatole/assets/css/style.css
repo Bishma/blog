@@ -334,6 +334,7 @@ a:active {
 .post {
     background-color: var(--bg-color);
     margin: 30px;
+    max-width: 840px;
 }
 
 .post .post-title h1 {
