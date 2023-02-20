@@ -1,52 +1,55 @@
 .mastodon-container {
-    margin-left: 1rem;
-  }
+  margin-left: 1rem;
+}
   
-  .mastodon-comment {
-    border: 1px solid #999;
-    border-radius: 6px;
-    margin: 0.5rem 0;
-    display: flex;
-    padding: 0.5rem 1rem;
-  }
-  
-  .mastodon-comment .avatar img {
-    margin-right: 1rem;
-    min-width: 60px;
-  }
-  
-  .mastodon-comment .content {
-    width: 100%;
-  }
-  
-  .mastodon-comment .date {
-    float: right;
-  }
-  
-  .mastodon-comment .ellipsis::after {
-    content: "\2026";
-  }
-  
-  .mastodon-comment .invisible {
-    font-size: 0;
-    line-height: 0;
-    display: inline-block;
-    width: 0;
-    height: 0;
-  }
+.mastodon-comment {
+  border: 1px solid #999;
+  border-radius: 6px;
+  margin: 0.5rem 0;
+  display: flex;
+  gap: 8px;
+  flex-flow: row wrap;
+  justify-content: left;
+  padding: 0.5rem 1rem;
+}
 
-  .mastodon-comment .content {
-    margin-top: 8px;
-  }
+.mastodon-comment .avatar {
+  flex-basis: min-content;
+}
 
-  .mastodon-comment .displayName {
-    font-weight: bold;
-    font-size: 104%;
-    display: block;
-  }
+.mastodon-comment .avatar img {
+  min-width: 60px;
+}
 
-  .mastodon-comment .accountName {
-    font-size: 90%;
-    font-style: italic;
-    color: #999;
-  }
+.mastodon-comment .ellipsis::after {
+  content: "\2026";
+}
+
+.mastodon-comment .invisible {
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.mastodon-comment .date {
+  float: right;
+}
+
+.mastodon-comment .content {
+  margin-top: 2px;
+  flex-grow: 1;
+  position: unset;
+}
+
+.mastodon-comment .displayName {
+  font-weight: bold;
+  font-size: 104%;
+  display: block;
+}
+
+.mastodon-comment .accountName {
+  font-size: 90%;
+  font-style: italic;
+  color: #999;
+}
