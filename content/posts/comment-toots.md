@@ -13,7 +13,7 @@ comments:
   host: mas.to
   username: bishma
   id:
-draft: true
+draft: false
 ---
 
 ## {{< param description >}}
