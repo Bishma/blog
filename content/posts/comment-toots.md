@@ -18,6 +18,7 @@ draft: false
 
 ## {{< param description >}}
 
+<!-- markdownlint-disable-next-line -->
 <img align="left" src="/images/comment-toots/mastodon-derek.png" width="280" hspace="25">
 
 Well, I guess I've landed on [Mastodon](https://mas.to/@bishma) since the bird started shitting everywhere. I was resistant since I don't think it can ever be the real-time discovery engine that Twitter was (at its best). But, seeing as I spent an afternoon linking Mastodon threads as a comment system for this [Hugo](https://gohugo.io/) blog, I guess the choice has been made.
@@ -145,7 +146,7 @@ First I need a 3rd party JS library called [DOMPurify](https://github.com/cure53
 
 We also need the CSS that was mentioned above. I already downloaded it and it's called from inside the comments partial discussed above. It is clumsy AF but it gets the job done. It styles the commenters avatar, display name, and username along with their comments. I may not like everyone's avatars being on my site, so this it the place to tweak that display.
 
-### Step 5: Post this and see what happens.
+### Step 5: Post this and see what happens
 
 We'll see how long this takes to break or how soon I realize that testing in FF and Chrome in a single OS is not sufficient.
 
