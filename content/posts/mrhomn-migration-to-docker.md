@@ -229,7 +229,7 @@ The fix that finally worked was altering my synology's iptables settings. I don'
 
 ## The port dance
 
-For the sake of compatibility I need ingressing traffic to come in via public ports 80 and 443 but I'm already using these ports (privately) on my host device for unrelated internal traffic routing through nginx. So home automation requests will hit my my WAF on 80/443 and then forward to ports 8321/8322 respectively on my Synology. But then docker is going map those host ports back to 80/443 😕
+For the sake of compatibility I need ingressing traffic to come in via public ports 80 and 443 but I'm already using these ports (privately) on my host device for unrelated internal traffic routing through nginx. So home automation requests will hit my WAF on 80/443 and then forward to ports 8321/8322 respectively on my Synology. But then docker is going map those host ports back to 80/443 😕
 
 To keep it all straight I made a flow chart.
 
