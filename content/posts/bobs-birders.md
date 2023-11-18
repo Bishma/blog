@@ -4,7 +4,6 @@ date: 2023-11-18T14:03:27-08:00
 description: "A \"Burger\" Restaurant for Birds & Squirrels"
 images:
  - /images/bobs-birders/cover photo - squareish.jpg
- - images/bobs-birders/cover photo.jpg
 tags:
  - 3d-printing
  - design
