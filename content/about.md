@@ -16,10 +16,11 @@ I don't play basketball or sell pajamas.
 
 ### Software
 
-* Home Assistant
-* AppDaemon
-* Docker
-* Tasker
+* <a href="https://www.home-assistant.io/" target="_blank">Home Assistant</a>
+* <a href="https://appdaemon.readthedocs.io/en/latest/" target="_blank">AppDaemon</a>
+* <a href="https://www.docker.com/" target="_blank">Docker</a>
+* <a href="https://tasker.joaoapps.com/" target="_blank">Tasker</a>
+* <a href="https://octoprint.org/" target="_blank">Octoprint</a>
 
 {{% /layout/flex-column %}}
 
@@ -27,10 +28,10 @@ I don't play basketball or sell pajamas.
 
 ### Hardware
 
-* Raspberry Pi 3b+
-* Z-Wave
-* Synology Diskstation
-* Logitech Harmony Hub
+* Intel NUC D54250WYK
+* <a href="https://aeotec.com/products/aeotec-z-stick-gen5/" target="_blank">Aeotec Z-Wave Stick</a>
+* Synology DS920+
+* Broadlink RM Mini 3 (x2)
 
 {{% /layout/flex-column %}}
 
@@ -38,7 +39,7 @@ I don't play basketball or sell pajamas.
 
 ### Availability
 
-* Github Repo
+* My repos are horribly out of date
 
 {{% /layout/flex-column %}}
 
@@ -64,7 +65,7 @@ I don't play basketball or sell pajamas.
 
 * Original Prusa I3 Mk3s
 * Raspberry Pi 4b
-* Logitec C920 & 
+* Logitec C920
 
 {{% /layout/flex-column %}}
 
@@ -78,8 +79,10 @@ I don't play basketball or sell pajamas.
 
 ### Availability
 
-* [Github Repo](https://github.com/Bishma/admafu)
-* [Thingiverse](https://www.thingiverse.com/dereksrose/designs)
-* [PrusaPrinters](https://www.prusaprinters.org/social/28313-dereksrose/prints)
+* <a href="https://github.com/Bishma/admafu" target="_blank">Github Repo</a>
+* <a href="https://www.thingiverse.com/dereksrose/designs" target="_blank">Thingiverse</a>
+* <a href="https://www.prusaprinters.org/social/28313-dereksrose/prints" target="_blank">PrusaPrinters</a>
 
 {{% /layout/flex-column %}}
+
+{{% /layout/flex %}}
