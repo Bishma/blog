@@ -2,7 +2,9 @@
 title: "Bobs Birders"
 date: 2023-03-02T14:03:27-08:00
 description: "A \"Burger\" Restaurant for Birds & Squirrels"
-images: []
+images:
+ - /images/bobs-birders/cover photo - squareish.jpg
+ - images/bobs-birders/cover photo.jpg
 tags:
  - 3d-printing
  - design
@@ -10,7 +12,7 @@ tags:
 comments:
   host: mas.to
   username: bishma
-  id:
+  id: 111433892848364757
 draft: false
 ---
 
