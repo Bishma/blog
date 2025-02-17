@@ -15,7 +15,6 @@
 
 {{- partial "medium-zoom.html" . -}}
 {{- partial "math.html" . -}}
-{{- template "_internal/google_analytics_async.html" . -}}
 
 {{ $js := resources.Get "js/lightbox.js" }}
 {{ $secureJS := $js |  resources.Minify | resources.Fingerprint }}

@@ -1,14 +1,18 @@
 ---
 title: "Fifteen Month Update on Bob's Birders"
-date: 2025-02-16T18:04:49-08:00
+date: 2025-02-16T19:04:49-08:00
 description: "How hard has life been on a 3D Printed Squirrel Feeder?"
-images: []
-tags: []
+images:
+ - /images/bobs-birders-update1/bonus-may I help you.jpg
+tags:
+ - 3d-printing
+ - update
+ - critters
 comments:
   host: mas.to
   username: bishma
   id: 
-draft: true
+draft: false
 ---
 
 ## {{< param description >}}
