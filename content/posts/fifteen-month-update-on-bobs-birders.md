@@ -62,3 +62,7 @@ About once a month I wash and sterilize the seed tray and wipe the restaurant do
 {{< layout/image-squash-element gallery="Bonus" image="/images/bobs-birders-update1/bonus-munches in the rain.jpg" caption="The squirrels quickly figured out that Bob's is a respite from the rain. With snacks!" >}}
 
 {{< /layout/image-squash >}}
+
+## Free 3D Model
+
+As always, for folks with access to a 3D printer, the [model for Bob's Birders](https://www.printables.com/model/493447-bobs-birders-bird-and-squirrel-feeder) is available for free.
