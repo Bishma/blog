@@ -41,7 +41,7 @@ The very first Bob's Birder's feeder has been serving our yard friends for over 
 
 I fill the feeder every other day which has let the squirrels and jays figure out the schedule. When I go into our garage in the evening they start to gather. It's been great entertainment for out cats.
 
-I am impressed at how well it's held up. It's gotten more time in use than I expected. There are often squirrels sitting on the counter, one after another, for hours at a time. And even with all that there's been no deformation of the floor or bending of the stools. The jays and crows like to hand out on the roof, but you'd never know it to look at it.
+I am impressed at how well it's held up. It's gotten more time in use than I expected. There are often squirrels sitting on the counter, one after another, for hours at a time. And even with all that, there's been no deformation of the floor or bending of the stools. The jays and crows like to hand out on the roof, but you'd never know it to look at it.
 
 ## Ongoing care
 
